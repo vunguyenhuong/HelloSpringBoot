@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="d-flex justify-content-end mb-3">
+        <input class="form-control me-sm-2 " type="text" placeholder="Search" ng-model="searchValue" style="width: 15rem">
+    </div>
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="e in listEmployee | filter : {name : searchValue}">
+                    <td>{{$index+1}}</td>
+                    <td>{{e.code}}</td>
+                    <td>{{e.name}}</td>
+                    <td>{{e.email}}</td>
+                    <td>{{e.status ? "Active" : "Not Active"}}</td>
+                    <td>
+                        <a href="#!employee/{{e.id}}" class="btn btn-warning" ><i class="fas fa-edit"></i></a>
+                        <button class="btn btn-danger" ng-click="delete(e.id)"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

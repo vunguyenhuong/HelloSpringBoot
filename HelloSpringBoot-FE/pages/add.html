@@ -1,0 +1,39 @@
+<div class="container">
+    <form action="" method="post" name="form">
+        <div class="row">
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Code <span ng-if="form.code.$invalid" class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="employee.code" name="code" required>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Name <span ng-if="form.name.$invalid" class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="employee.name" name="name" required>
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Email <span ng-if="form.email.$invalid" class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="employee.email" name="email" required pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$">
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Password <span ng-if="form.password.$invalid" class="text-danger">*</span></label>
+                <input type="text" class="form-control" ng-model="employee.password" name="password" required>
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Status <span ng-if="form.status.$invalid" class="text-danger">*</span></label>
+                <div class="">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" ng-model="employee.status" ng-value="true" name="status" required>
+                        <label class="form-check-label">Active</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" ng-model="employee.status" ng-value="false" name="status" required>
+                        <label class="form-check-label">Not Active</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mb-3" ng-click="add()">Submit</button>
+    </form>
+</div>

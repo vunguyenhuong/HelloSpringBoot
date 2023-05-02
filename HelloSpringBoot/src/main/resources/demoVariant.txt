@@ -1,0 +1,49 @@
+	Name		|	Size	|	Color	|	Price	|	Amount	|	Discount
+
+	Adidas		|	38	|	Gray	|	100	|	10	|	10%
+
+	Adidas		|	38	|	Black	|	150	|	5	|	5%
+
+	Adidas		|	40	|	Gray	|	130	|	15	|	3%
+
+
+*Table:
+
+1. Product:
+	- ID
+	- Name
+
+--- 	1	| Adidas
+
+
+2. Options:
+	- ID
+	- Name
+	- Parent_ID
+
+---	1	| Size		|	1
+---	2	| Color		|	1
+---	3	| Gray		| 	0
+---	4	| Black		|	0
+
+3. Variant_Options:
+	- ID
+	- ID_Product
+	- ID_Options
+
+---	1	|	1	|	1
+---	2	|	1	|	2
+---	3	|	1	|	3
+---	4	|	1	|	4
+
+
+4. SKU
+	- ID
+	- ID_Product
+	- Price
+	- Amount
+
+5. SKU_Value
+	- ID
+	- ID_SKU
+	- ID_Variant_Options

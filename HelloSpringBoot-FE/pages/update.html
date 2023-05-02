@@ -1,0 +1,40 @@
+<div class="container">
+    <form action="" method="post">
+        <div class="row">
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Code</label>
+                <input type="text" class="form-control" ng-model="employee.code">
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" ng-model="employee.name">
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" ng-model="employee.email">
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Password</label>
+                <input type="text" class="form-control" ng-model="employee.password">
+                <small id="helpId" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3 col-xl-6">
+                <label class="form-label">Status</label>
+                <div class="">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" ng-model="employee.status" ng-value="true">
+                        <label class="form-check-label">Active</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" ng-model="employee.status" ng-value="false">
+                        <label class="form-check-label">Not Active</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mb-3" ng-click="update()">Submit</button>
+    </form>
+</div>
